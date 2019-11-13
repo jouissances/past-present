@@ -5,13 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Past & Present — in a nutshell 🥜</title>
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/stylesheet.css" />
   </head>
   <body>
-    <canvas id="canvas"></canvas>
+    <!-- <canvas id="canvas"></canvas> -->
+
+    <div id="map"></div>
+    <script>
+      mapboxgl.accessToken =
+        "pk.eyJ1Ijoiam91aXNzYW5jZXMiLCJhIjoiY2syeGlrZzdxMGNyMjNtbjE5ejJnaXppMiJ9.ParlYxMQUA3yXoHGAI4YdA";
+      var map = new mapboxgl.Map({
+        container: "map",
+        minZoom: "6",
+        center: [-3.398, 54.089],
+        style: "mapbox://styles/jouissances/ck2xjvmgf06a01ckgio37z4ua"
+      });
+    </script>
+
     <h1>
-      <a href="https://pastpresent.jcink.net/" class="highlight"
-        >Past and Present — in a nutshell 🥜</a
+      <a
+        href="https://pastpresent.jcink.net/"
+        class="scrambled"
+        title=" — in a nutshell"
+        >Past and Present</a
       >
     </h1>
     <nav>
@@ -90,7 +111,7 @@
       </ul>
     </nav>
     <script src="js/main.js"></script>
-    <script src="js/canvas.js"></script>
+    <script src="js/scramble.js"></script>
     <script src="js/highlight.js"></script>
   </body>
 </html>
