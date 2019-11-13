@@ -42,6 +42,12 @@ nav ul li {
   cursor: pointer;
 }
 
+/* Specific Functions */
+.about:active,
+.about:focus {
+  opacity: 1;
+}
+
 /* Fun Functions */
 .highlight {
   background-repeat: no-repeat;
@@ -54,23 +60,25 @@ nav ul li {
   background-size: 100% 88%;
 }
 
-.disappear {
-  display: none;
-  /* transition: all 400ms ease-in-out; */
+.hide {
+  /* color: #000000; */
+  opacity: 0.5;
+  transition: all 400ms ease-in-out;
 }
 
-.appear {
-  display: inline-block;
+.show {
+  /* color: #ffffff; */
+  opacity: 1;
   transition: all 400ms ease-in-out;
 }
 
 .slideIn {
   max-height: max-content;
-  transition: all 400ms ease-in-out;
+  transition: all 600ms ease-out;
 }
 
 .slideOut {
   max-height: 0;
   transform: translateX(-100vw);
-  transition: all 400ms ease-in-out;
+  transition: all 400ms ease-out;
 }

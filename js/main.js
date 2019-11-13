@@ -1,3 +1,5 @@
+const about = document.querySelector('.about');
+
 const london = document.querySelector('.london');
 const londonSettlementsNav = document.querySelector('.london-settlements-nav');
 const londonSettlements = document.querySelector('.london-settlements');
@@ -17,6 +19,16 @@ const agrilandsNav = document.querySelector('.agrilands-nav');
 const agrilands = document.querySelector('.agrilands');
 
 london.addEventListener('click', function(e) {
+    outskirtsSettlementsNav.classList.add('slideOut');
+    outskirtsSettlements.classList.add('slideOut');
+    london.classList.remove('hide');
+    if (londonSettlementsNav.classList.contains('slideOut')) {
+        about.classList.add('hide');
+        outskirts.classList.add('hide');
+    } else {
+        about.classList.remove('hide');
+        outskirts.classList.remove('hide');
+    }
     slide(londonSettlementsNav);
     londonSettlements.classList.add('slideOut');
 });
@@ -66,6 +78,16 @@ const colonyNav = document.querySelector('.colony-nav');
 const colony = document.querySelector('.colony');
 
 outskirts.addEventListener('click', function(e) {
+    londonSettlementsNav.classList.add('slideOut');
+    londonSettlements.classList.add('slideOut');
+    outskirts.classList.remove('hide');
+    if (outskirtsSettlementsNav.classList.contains('slideOut')) {
+        about.classList.add('hide');
+        london.classList.add('hide');
+    } else {
+        about.classList.remove('hide');
+        london.classList.remove('hide');
+    }
     slide(outskirtsSettlementsNav);
     outskirtsSettlements.classList.add('slideOut');
 });
@@ -97,7 +119,7 @@ function slide(arg) {
         arg.classList.remove('slideOut');
     } else {
         console.log('YO I AM GOING OUT');
-        arg.classList.remove('slideIn');
         arg.classList.add('slideOut');
+        arg.classList.remove('slideIn');
     }
 }
