@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nanum Gothic Coding", monospace;
+  font-size: 16px;
+  color: #ffffff;
+  background: #000000;
+  overflow-x: hidden;
+  text-transform: lowercase;
+}
+
+canvas {
+  display: block;
+  position: fixed;
+  z-index: -1;
+}
+
+h1 a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 25px;
+  padding: 10px 2px 6px 2px;
+}
+
+nav {
+  margin-left: 35px;
+}
+
+nav ul {
+  padding-inline-start: 20px;
+}
+
+nav ul li {
+  list-style: none;
+  height: auto;
+  width: max-content;
+  line-height: 2.75;
+  /* margin: 5px 0; */
+  cursor: pointer;
+}
+
+/* Fun Functions */
+.highlight {
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 112%;
+  transition: all 200ms ease-in-out;
+}
+
+.highlight:hover {
+  background-size: 100% 88%;
+}
+
+.disappear {
+  display: none;
+  /* transition: all 400ms ease-in-out; */
+}
+
+.appear {
+  display: inline-block;
+  transition: all 400ms ease-in-out;
+}
+
+.slideIn {
+  max-height: max-content;
+  transition: all 400ms ease-in-out;
+}
+
+.slideOut {
+  max-height: 0;
+  transform: translateX(-100vw);
+  transition: all 400ms ease-in-out;
+}
